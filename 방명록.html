@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1"
+    >
+    <title></title>
+</head>
+<body>
+    <h1>방명록을 입력해주세요!!</h1>
+    <input type="text" id="writer" placeholder="작성자"><br>
+    <textarea id="writing" rows="4" cols="50" placeholder="내용을 넣어주세요."></textarea><br>
+    <button id="okay">방명록 작성완료</button>
+    <script type="text/javascript">
+        okay.onclick = function(){
+            console.log("ok");
+            let t = document.getElementById("writer");
+            let time = new Date();
+            let guestDate = time.getDate();
+            let guestMonth = time.getMonth() + 1;
+            let inputDate = guestMonth + "/" + guestDate;
+            let s = document.getElementById("writing");
+            
+            console.log(t.value + "@" + guestDate + "@" + s.value);
+        }
+    </script>
+    </body>
+    <html>
